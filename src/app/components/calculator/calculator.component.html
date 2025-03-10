@@ -1,6 +1,8 @@
 <table class="calculator" >
   <tr>
-    <td colspan="3"> <h1 style="color: aliceblue;">{{display}} </h1></td>
+    <td colspan="3">
+      <h1 style="color: aliceblue;">{{display}} </h1>
+    </td>
  
     <td> <input type="button" value="C" (click)="onClick('c')" id="btn" /> </td>
   </tr>
@@ -28,7 +30,7 @@
     <td> <input type="button" value="0" (click)="onClick(0)" /> </td>
 
   <!-- Para el boton calcular -->
-    <td> <input type="button" value="=" (click)="calcular()" id="btn" /> </td>
+    <td> <input type="button" value="=" (click)="onClick('=')" id="btn" /> </td>
     <td> <input type="button" value="*" (click)="onClick('*')" /> </td>
   </tr>
 </table>
