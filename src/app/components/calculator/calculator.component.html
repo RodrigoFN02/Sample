@@ -1,36 +1,8 @@
 <table class="calculator" >
   <tr>
     <td colspan="3">
-      <h1 style="color: aliceblue;">{{display}} </h1>
-    </td>
- 
-    <td> <input type="button" value="C" (click)="onClick('c')" id="btn" /> </td>
+      <app-display [displayMessage]="display"></app-display>
+      </td>
   </tr>
-  <!-- Construccion de la calculadora -->
-  <tr>
-    <td> <input type="button" value="1" (click)="onClick(1)" /> </td>
-    <td> <input type="button" value="2" (click)="onClick(2)" /> </td>
-    <td> <input type="button" value="3" (click)="onClick(3)" /> </td>
-    <td> <input type="button" value="/" (click)="onClick('/')" /> </td>
-  </tr>
-  <tr>
-    <td> <input type="button" value="4" (click)="onClick(4)" /> </td>
-    <td> <input type="button" value="5" (click)="onClick(5)" /> </td>
-    <td> <input type="button" value="6" (click)="onClick(6)" /> </td>
-    <td> <input type="button" value="-" (click)="onClick('-')" /> </td>
-  </tr>
-  <tr>
-    <td> <input type="button" value="7" (click)="onClick(7)" /> </td>
-    <td> <input type="button" value="8" (click)="onClick(8)" /> </td>
-    <td> <input type="button" value="9" (click)="onClick(9)" /> </td>
-    <td> <input type="button" value="+" (click)="onClick('+')" /> </td>
-  </tr>
-  <tr>
-    <td> <input type="button" value="." (click)="onClick('.')" /> </td>
-    <td> <input type="button" value="0" (click)="onClick(0)" /> </td>
-
-  <!-- Para el boton calcular -->
-    <td> <input type="button" value="=" (click)="onClick('=')" id="btn" /> </td>
-    <td> <input type="button" value="*" (click)="onClick('*')" /> </td>
-  </tr>
+  <app-keyboard (onClickEvent)="onClick($event)"></app-keyboard>
 </table>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DisplayComponent } from "./calculator/display/display.component";
+import { KeyboardComponent } from "./calculator/keyboard/keyboard.component";
 enum State{
   INIT,
   FIRST_FIGURE,
@@ -8,11 +10,12 @@ enum State{
 
 @Component({
   selector: 'app-calculator',
-  imports: [],
+  imports: [DisplayComponent, KeyboardComponent],
   templateUrl: './calculator.component.html',
   styleUrl: './calculator.component.css'
 })
 export class CalculatorComponent {
+
   display:string =''
   currentState =State.INIT;
   firstFigure=0;
